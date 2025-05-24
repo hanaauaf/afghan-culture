@@ -1,0 +1,438 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Nunito', sanss-serif;
+    background-color: #d6dde4;
+}
+
+.nav{
+    background-color: #8894b7;
+    padding:1rem;
+    margin:auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    width:100%;
+    z-index:10;
+    top:0;
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap:1.5rem;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+nav a:hover{
+    color:#F4C74D;
+}
+
+
+@keyframes slideshow{
+    0% {background-image: url('panjshir🇦🇫.jpeg'); }
+    20% {background-image: url('Kashmir\ Valley\ _\ Afghanistan.jpeg');}
+    40% {background-image: url('Kabul\,\ Afghanistan.jpeg');}
+    60% {background-image: url('Afghanistan\ nature\ bamyan\,\ band-e-Amir.jpeg');}
+    80% {background-image: url('Discover\ Afghanistan\'s\ Natural\ Beauty_\ Band-e\ Amir\ Lakes\ at\ Sunset.jpeg');}
+    100% {background-image: url('Band-e-Amir\ National\ Park\ in\ Afghanistan.jpeg');}
+}
+.heading{
+    height:400px;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 10s infinite;
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    text-align: center;
+}
+.heading::after{
+    position:absolute;
+    background:rgba(0, 0, 0, 0.4);
+    z-index:1;
+    inset:0;
+    content:"";
+}
+.overlay-text{
+    position:relative;
+    max-width: 80%;
+    z-index: 2;
+}
+.overlay-text h1{
+    margin-bottom: 10px;
+    font-size:3rem;
+}
+.overlay-text p{
+    font-size: 1.2rem;
+}
+.culture{
+    display:grid;
+    gap:30px;
+    padding:30px;
+    grid-template-rows: repeat(4, auto);
+}
+.culture-card{
+    background-color: rgba(244, 200, 77, 0.737);
+    display:flex;
+    justify-content: space-between;
+    margin:0 auto;
+    align-items: center;
+    width:70%;
+    height:250px;
+    border-radius: 12px;
+    padding:10px;
+    transition: transform 1s ease;
+    overflow:hidden;
+}
+.culture-card img{
+    width:280px;
+    height:230px;
+    padding:8px;
+    border-radius: 20px;
+}
+.culture-card h1{
+    font-size: 1.8rem;
+    margin-bottom:10px;
+}
+.text p{
+    text-align: justify;
+    font-size: 1.1rem;
+}
+.text{
+    width:65%;
+    margin-right:10px;
+}
+.h1{
+    text-align: center;
+    margin-top:20px;
+    padding:30px;
+    font-size: 2.3rem;
+}
+.p{
+    text-align: center;
+    padding:10px;
+    margin-bottom:20px;
+    font-size: 1.4rem;
+    animation: fadein 3s ease forwards;
+}
+@keyframes fadein{
+    from{
+        opacity:0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.culture-card:hover{
+    transform:scale(1.05);
+}
+.featured{
+    display:grid;
+    gap: 60px;
+    padding:20px;
+    grid-template-columns: repeat(2, 30%);
+    justify-content: center;
+    align-items: center;
+    margin-top:100px;
+}
+.divs{
+    display:grid;
+    
+    border-radius: 10px;
+    height: 540px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    padding:10px;
+    margin: 0 auto;
+    background-color: white;
+}
+.divs img{
+    width:430px;
+    height:240px;
+    padding:7px 5px 2px 5px;
+    border-radius: 20px;
+}
+.div-text p{
+    margin-top:10px ;
+    font-size: 1.1rem;
+    text-align: left;
+    padding-left:10px;
+    margin-right:10px;
+    text-align: justify;
+}
+.div-text h1{
+    font-size: 1.9rem;
+    margin-top:-25px;
+    padding-left: 10px;
+}
+.div-h1{
+    text-align: center;
+    padding:20px;
+    margin-top:100px;
+}
+.divs:hover{
+    box-shadow:0 8px 24px rgba(0, 0, 0, 0.3); 
+    transition:box-shadow 0.3 ease;
+}
+.footer-div{
+    background-color: #8894b7;
+    display:flex;
+    justify-content: space-between;
+    padding:20px 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width:100%;
+    height:530px;
+    margin-top:200px;
+}
+.contact-footer h2{
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+.contact-footer{
+    width:40%;
+}
+.connect{
+    width:40%;
+}
+
+.contact-footer label{
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size:1.2rem;
+
+}
+.contact-footer input, .contact-footer textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom: 20px;
+    margin-top:20px;
+    border-radius: 10px;
+    border:none;
+    font-size:0.8rem ;
+    resize:none;
+    box-sizing: border-box;
+}
+.contact-footer button{
+    width:70px;
+    padding:10px;
+    border-radius: 7px;
+    cursor:pointer;
+    background-color: white;
+}
+.contact-footer button:hover{
+    box-shadow:0 8px 24px rgba(0, 0, 0, 0.402);
+}
+.contact-footer input:hover, textarea:hover{
+    box-shadow:0 8px 24px rgba(0, 0, 0, 0.402);
+}
+.connect{
+    margin-left:900px;
+    margin-top:-370px;
+    width:50%;
+}
+.connect ul{
+    display: flex;
+    gap:20px;
+    list-style: none;
+    margin-top:30px;
+    font-size:2rem;
+}
+.connect p{
+    font-size: 1.5rem;
+    margin-bottom:20px;
+}
+.connect a:hover{
+    text-decoration:underline;
+    color:#F4C74D;
+}
+.connect h4{
+    font-size: 1.5rem;
+}
+.title{
+    padding:30px;
+    margin-top:70px;
+    text-align: center;
+}
+.title h1{
+    font-size:3rem;
+}
+.title p{
+    font-size:1.3rem;
+    padding:20px;
+}
+.cards{
+    display:grid;
+    grid-template-columns: repeat(2, minmax(300px, 440px));
+    gap:60px;
+    padding:10px;
+    justify-content: center;
+    
+}
+.cards img{
+    width:100%;
+    height:270px;
+    padding:7px 5px 2px 5px;
+    border-radius: 20px;
+}
+.cards div{
+    display:grid;
+    border-radius: 10px;
+    height: 440px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    padding:10px;
+    margin: 0px auto;
+    transition: all 0.4s ease;
+    overflow:hidden;
+}
+.cards div:hover{
+    background-color:#8894b7d0;
+    transform: scale(1.03);
+}
+.cards p {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.7s ease;
+}
+
+.cards div:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bg1{
+    background-color:rgba(244, 200, 77, 0.737);  ;
+}
+.head-text {
+    margin-top:100px;
+    padding:20px;
+    text-align: center;
+}
+.head-text p{
+    padding-top:20px;
+}
+.city-day{
+    display:flex;
+    justify-content: space-between;
+    gap:20px;
+    background-color: #f4c84dbc;
+    align-items: flex-start;
+    width:60%;
+    flex-wrap: wrap;
+    padding:20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    margin:100px auto;
+    border-radius: 10px;
+}
+.city-images{
+    display:flex;
+    gap:20px;
+    width: 25%;
+    flex-direction: column;
+}
+.city-images img{
+    width:100%;
+    border-radius: 10px;
+    height:200px;
+}
+.text{
+    flex:1;
+    max-width:70%
+}
+.text h2{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+.text p{
+    font-size:1.1rem;
+    line-height: 1.5;
+    transition:transform 0.4s ease;
+}
+.city-day:hover{
+    background-color: white;
+    transition:background-color 0.4s ease;
+}
+.city-day:hover .text p{
+    transform: translateY(-5px)
+}
+.form-container{
+    display:flex;
+    align-items: center;
+    padding:20px;
+    margin: 200px auto;
+    background-color: white;
+    flex-wrap: wrap;
+    width:70%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.description{
+    padding:20px; 
+}
+.description p{
+    padding-top:10px;
+    word-spacing: 3px;
+    line-height: 1.5;
+}
+.form{
+    width:100%
+}
+.form label{
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display:block;
+}
+.form input, .form textarea{
+    width:60%;
+    margin-top:20px;
+    margin-bottom:20px;
+    padding:12px;
+    box-sizing: border-box;
+    resize: none;
+    border-radius: 10px;
+    border:2px solid black;
+    display:block;
+    transition:width 0.6s ease, border-color 0.3s ease;
+    
+}
+.form button{
+    width:70px;
+    padding:10px;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+.form button:hover{
+    box-shadow: 0 0 20px rgba(100, 155, 222, 0.5);
+    border:2px solid #8894b7;
+}
+.form input:focus, .form textarea:focus{
+    outline:none;
+    width:90%;
+    border: 2px solid #8894b7;
+    box-shadow: 0 0 8px rgba(136, 148, 183, 0.649); 
+}
+.form input:hover, .form textarea:hover{
+    box-shadow: 0 0 8px rgba(136, 148, 183, 0.649);
+}
+
+.form input::placeholder, .form textarea::placeholder{
+    color:#999;
+    font-size: 0.8rem;
+    opacity:1;
+}
+
+
+
+
